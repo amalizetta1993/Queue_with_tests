@@ -1,3 +1,21 @@
+"""Модуль организации односвязного списка и работы с ним.
+
+В модуле есть 2 класса:
+1. Node:
+    - метод инициализации __init__
+    
+2. LinkedList:
+    - метод инициализации __init__
+    - метод insert_at_head (добавляет элемент в начало списка)
+    - метод insert_at_end (добавляет элемент в конец списка)
+    - метод remove_node_position (удаляет элемент с выбранной позиции)
+    - метод insert_at_position (вставляет элемент на выбранную позицию)
+    - метод print_ll(выводит данные всего списка)
+    - метод get (проверяем, есть данные в списке и возвращаем узел)
+    - метод change_data (замена данных в узле)
+ 
+"""
+
 class Node:
     def __init__(self, data, next_node=None):
         self.data = data
@@ -65,6 +83,7 @@ class LinkedList:
             current_node = current_node.next_node
             current_node_position += 1
         """Если есть опционально (код выше то следующие 2 строки не нужны)"""
+        
         if current_node is None:
             return None
         new_node.next_node = current_node.next_node
@@ -104,3 +123,4 @@ class LinkedList:
     #         current_node.data = change_data
     #         return "Данные изменены!"
     #     return "Данные не обнаружены"
+
